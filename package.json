@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "npm-watch": "^0.7.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-pure-lifecycle": "^3.0.0",
@@ -16,9 +17,17 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "watch": "react-scripts build --watch",
+    "watch": "npm-watch",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js,jsx"
+    }
   },
   "eslintConfig": {
     "extends": [
